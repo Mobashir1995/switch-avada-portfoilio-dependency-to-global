@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<ruleset name="CS">
+	<description>WordPress Coding Standards for SwissDisplay.</description>
+
+	<file>.</file>
+
+	<!-- Configs -->
+
+	<!-- Exclude the Node Modules directory. -->
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+
+	<!-- Exclude Vendor directory. -->
+	<exclude-pattern>vendor/*</exclude-pattern>
+
+	<!-- Exclude Javascript files. -->
+	<exclude-pattern>*.js</exclude-pattern>
+
+	<!-- Exclude CSS files. -->
+	<exclude-pattern>*.css</exclude-pattern>
+
+	<!-- WordPress minimum version check. -->
+	<config name="minimum_supported_wp_version" value="6.4"/>
+
+	<!-- Loads the PHP Compatibility ruleset. -->
+	<rule ref="PHPCompatibilityWP" />
+
+	<!-- PHP version check. -->
+	<config name="testVersion" value="7.4-" />
+
+	<!-- Rules -->
+	<rule ref="WordPress" />
+
+	<arg name="colors"/>
+	<arg value="p"/>
+
+</ruleset>
